@@ -423,8 +423,7 @@ class _HomePageState extends State<HomePage> {
                   title: Text(c.name, style: tt.titleMedium),
                   subtitle: Text(_eur(c.amount),
                       style: tt.bodyLarge?.copyWith(
-                          color: cs.primary
-, fontWeight: FontWeight.w600)),
+                          color: cs.primary, fontWeight: FontWeight.w600)),
                   onTap: () => _showChargeSheet(context, store, charge: c),
                   trailing: IconButton(
                     tooltip: 'Supprimer',
@@ -767,8 +766,11 @@ class _Stat extends StatelessWidget {
                   color: highlight ? cs.primary : cs.onSurface)),
         ),
       ],
+    );
+  }
+}
 
-      // ───────────────────────── Formulaire charge ─────────────────────────
+// ───────────────────────── Formulaire charge ─────────────────────────
 
 Future<void> _showChargeSheet(BuildContext context, BudgetStore store,
     {Charge? charge}) {
@@ -873,7 +875,7 @@ class _ChargeFormState extends State<_ChargeForm> {
   }
 }
 
-      // ───────────────────────── Formulaire livret ─────────────────────────
+// ───────────────────────── Formulaire livret ─────────────────────────
 
 Future<void> _showLivretSheet(BuildContext context, BudgetStore store,
     {Livret? livret}) {
